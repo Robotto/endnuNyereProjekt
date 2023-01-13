@@ -1,3 +1,5 @@
+'''skrevet af mark'''
+
 print("nu har vi importeret en anden fil") #dårlig stil at køre kode uden at blive spurgt
 
 def enFunktionFraEtAndetSted():
