@@ -1,16 +1,16 @@
-navnet = input('skriv dit navn: ')
-print('hej', navnet)
+def giverAltidEnFloat():
+    tastet = input("giv mig et tal")
+    try:
+        return float(tastet)
+    except ValueError:
+        print("det virkede ikke.. prøv igen...")
+        return giverAltidEnFloat()
 
-try:
-    etTal = float(input('Giv mig et tal: '))
-except:
-    print("det virkede ikke.. vi siger bare det er nul...")
-    etTal=0
-#    exit('Fejlkode: ID-10-T')
 
-etAndetTal = int(input('Giv mig et andet tal: '))
+tallene = []
+antalTal = 5
+for i in range( antalTal ):
+    tallene.append( giverAltidEnFloat() )
 
-summen = etTal+etAndetTal
-print('Summen af de to tal er: ', summen, ',', navnet, '.. Vidste du ikke det?')
-
-print()
+#de skal lægges sammen og printes
+print(f"fedt. Tak for fem tal.. Summen er: {sum(tallene)}")
