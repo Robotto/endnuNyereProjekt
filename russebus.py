@@ -9,28 +9,25 @@ Den universelle opskrift som altid gælder 60% af tiden:
     Pseudokode
 
 '''
+muligeValg = {'1': 'Indbetal', '2': 'Status', '3': 'Gem og Luk'}
 
 def menu():
     #vis menuen -> print()?
 
     #vent på input
     #returner GYLDIGT valg
-    valg = input("Vælg en funktion")
+    print("Gyldige valg:")
+    for valgNummer, valg in muligeValg.items():
+        print(f"{valgNummer}: {valg}")
+    valg = input("Tast et af ovenstående tal for at vælge en funktion: ")
     return valg
 
-def tjekOmMenuValgetErGyldigt(valget):
-    # definér mulige valg
-    muligeValg = {'1':'Indbetal','2':'Status','3':'Gem og Luk'}
-
+def valgetErGyldigt(valget):
     #match brugervalg med mulige valg
-    if valget not in muligeValg.keys():
-        print("ugyldigt valg... prøv igen")
-        menu()
-        du har valgt muligeValg[valget]
-    return valget
-    #ingen match? -> spørg igen , vær god ved brugeren
-    #returnér valget
-    pass
+    if valget in muligeValg.keys():
+        return True
+    else:
+        False
 
 def indbetal():
     #spørg om navn
@@ -38,6 +35,15 @@ def indbetal():
     #gem
     pass
 
-print("Velkommen til russebusseprogrammet.me")
-valg = menu()
-print(f"du har valgt {valg}")
+if __name__ == "__main__":
+    print("Velkommen til russebusseprogrammet.me")
+    valg = menu()
+    print(f"du har valgt {valg}")
+    if valgetErGyldigt(valg):
+        switch()
+        if muligeValg[valg] == 'Indbetal':
+            indbetal()
+        elif
+
+    else:
+        pass
