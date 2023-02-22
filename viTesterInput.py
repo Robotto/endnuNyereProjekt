@@ -6,7 +6,7 @@ def giverAltidEnFloat(askThisQuestion):
         return float(tastet)
     except ValueError:
         print(f"Du tastede {tastet}... Det lykkedes ikke at tolke som et tal. Prøv igen...")
-        return giverAltidEnFloat() #https://media.tenor.com/C_typNW6OgEAAAAC/recursion-winnie.gif
+        return giverAltidEnFloat(askThisQuestion) #https://media.tenor.com/C_typNW6OgEAAAAC/recursion-winnie.gif
 
 alder = giverAltidEnFloat("Hvad er din alder?")
 
