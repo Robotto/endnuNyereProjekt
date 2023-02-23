@@ -86,7 +86,7 @@ if __name__ == "__main__":
                 case 'Status':
                     status()
                 case 'Gem og Luk':
-                    saveToFile("2p.pickle")
+                    saveToFile(data=indbetalinger, filename="2p.pickle")
                     exit("Bye!")
 
         else:
