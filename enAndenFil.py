@@ -1,4 +1,5 @@
 '''skrevet af mark'''
+test...
 
 print("nu har vi importeret en anden fil") #dårlig stil at køre kode uden at blive spurgt
 
